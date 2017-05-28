@@ -6,7 +6,7 @@ from configparser import ConfigParser
 from DebtDeligator import DebtDeligator
 
 config = ConfigParser()
-config.read('config')
+config.read('config_secret')
 TOKEN = config.get('Secret Key', 'token')
 
 id_to_nick = {int(config['Chat Ids'].get(nick_name)): nick_name.capitalize() for nick_name in config['Chat Ids'].keys()}
